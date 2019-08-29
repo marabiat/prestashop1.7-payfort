@@ -119,7 +119,7 @@ var payfortFortMerchantPage2 = (function () {
                         $( merchantPageFormId ).remove();
                     }
                     if(respnse.success) {
-                        $('<form id="frm_payfort_fort_payment" action="'+respnse.url+'" method="POST"><input type="submit"/></form>').appendTo('body');
+                        $('<form id="frm_payfort_fort_payment" action="'+respnse.url+'" method="POST"><input type="submit" style="visibility:hidden"/></form>').appendTo('body');
                         respnse.params.card_holder_name = $('#payfort_fort_card_holder_name').val();
                         respnse.params.card_number = $('#payfort_fort_card_number').val();
                         respnse.params.expiry_date = expDate;
@@ -169,7 +169,7 @@ var payfortFortMerchantPage = (function () {
                         $( merchantPageFormId ).remove();
                     }
                     if(respnse.success) {
-                        $('<form id="frm_payfort_fort_payment" action="'+respnse.url+'" method="POST"><input type="submit"/></form>').appendTo('body');
+                        $('<form id="frm_payfort_fort_payment" action="'+respnse.url+'" method="POST"><input type="submit" style="visibility:hidden"/></form>').appendTo('body');
                         $.each(respnse.params, function(k, v){
                             $('<input>').attr({
                                 type: 'hidden',
